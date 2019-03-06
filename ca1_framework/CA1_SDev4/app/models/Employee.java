@@ -90,10 +90,5 @@ public class Employee extends Model {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-
-    
-
-
-    
+     
 }
