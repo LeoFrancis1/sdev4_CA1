@@ -1,4 +1,4 @@
-package models.*;
+package models;
 
 import java.util.*;
 import javax.persistence.*;
@@ -8,7 +8,7 @@ import play.data.format.*;
 import play.data.validation.*;
 
 @Entity
-Public class Address extends Model {
+public class Address extends Model {
 
     @Id
     private Long id;

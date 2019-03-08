@@ -1,0 +1,5 @@
+[0m[[0m[33mwarn[0m] [0m[0m/home/wdd/sDev4CA1/sdev4_CA1/ca1_framework/CA1_SDev4/app/models/Department.java:68:1: unchecked conversion[0m
+[0m[[0m[33mwarn[0m] [0m[0m  required: java.util.LinkedHashMap<java.lang.String,java.lang.String>[0m
+[0m[[0m[33mwarn[0m] [0m[0m  found:    java.util.LinkedHashMap[0m
+[0m[[0m[33mwarn[0m] [0m[0m        LinkedHashMap<String,String> options = new LinkedHashMap();[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sDev4CA1/sdev4_CA1/ca1_framework/CA1_SDev4/app/models/Department.java: warnings found and -Werror specified[0m

@@ -2,7 +2,7 @@ name := """sDev4CA1"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayJava)
+lazy val root = (project in file(".")).enablePlugins(PlayJava,PlayEbean)
 
 scalaVersion := "2.12.8"
 
@@ -20,6 +20,7 @@ libraryDependencies += guice
 
 // Test Database
 libraryDependencies += "com.h2database" % "h2" % "1.4.197"
+libraryDependencies ++= Seq(evolutions,jdbc)
 
 // Testing libraries for dealing with CompletionStage...
 libraryDependencies += "org.assertj" % "assertj-core" % "3.11.1" % Test

@@ -1,4 +1,4 @@
-package models.*;
+package models;
 
 import java.util.*;
 import javax.persistence.*;
@@ -12,7 +12,7 @@ import play.data.validation.*;
 public class Project extends Model {
 
 @Id
-private Long id
+private Long id;
 
 @Constraints.Required
 private String projectName;    
