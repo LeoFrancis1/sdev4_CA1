@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/models/users/Login.java:9:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable Employee[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class models.users.Login[0m
-[0m[[0m[31merror[0m] [0m[0m        if (Employee.authenticate(email,password) == null)[0m
