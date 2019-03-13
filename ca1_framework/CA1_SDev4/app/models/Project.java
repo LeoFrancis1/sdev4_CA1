@@ -26,6 +26,14 @@ public class Project extends Model {
     private double allocatedBudget;
 
 
+    public Project(Long id, String projectName, Date startDate, Date finishDate, double allocatedBudget) {
+        this.id = id;
+        this.projectName = projectName;
+        this.startDate = startDate;
+        this.finishDate = finishDate;
+        this.allocatedBudget = allocatedBudget;
+    }
+
 
 
 //Make Methods to calculate these

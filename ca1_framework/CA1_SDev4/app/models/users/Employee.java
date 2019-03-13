@@ -23,6 +23,8 @@ public class Employee extends Model {
     @Column(insertable=false, updatable=false)
     private String role;
     @Constraints.Required
+    private String name;
+    @Constraints.Required
     private String jobTitle;
     @Constraints.Required
     private String workPhone;
@@ -38,9 +40,10 @@ public class Employee extends Model {
 
     }
 
-    public Employee(String email, String role, String jobTitle, String workPhone, double salary, String password) {
+    public Employee(String email, String role,String name, String jobTitle, String workPhone, double salary, String password) {
         this.email = email;
         this.role = role;
+        this.name = name;
         this.jobTitle = jobTitle;
         this.workPhone = workPhone;
         this.salary = salary;
@@ -61,6 +64,14 @@ public class Employee extends Model {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getJobTitle() {

@@ -1,7 +1,8 @@
-@(loginForm: Form[models.users.Login])
+
+@(loginForm: Form[models.users.Login],employee: models.users.Employee)
 @import helper._
 
-@main("Login") {
+@main("Login",employee) {
     <h3>Sign In</h3>
     <!--Displays possible login errors-->
     @if(loginForm.hasGlobalErrors) {

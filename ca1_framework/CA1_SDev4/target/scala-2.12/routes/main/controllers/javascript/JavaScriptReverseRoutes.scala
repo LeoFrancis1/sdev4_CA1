@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/conf/routes
-// @DATE:Wed Mar 13 10:53:25 GMT 2019
+// @DATE:Wed Mar 13 21:41:36 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:17
+  // @LINE:23
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:17
+    // @LINE:23
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -71,6 +71,46 @@ package controllers.javascript {
   
   }
 
+  // @LINE:18
+  class ReverseEmployeeCRUDController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:19
+    def addEmployee: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeCRUDController.addEmployee",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addNewEmployee"})
+        }
+      """
+    )
+  
+    // @LINE:20
+    def addEmployeeSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeCRUDController.addEmployeeSubmit",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addEmployeeSubmit"})
+        }
+      """
+    )
+  
+    // @LINE:18
+    def usersEmployee: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeCRUDController.usersEmployee",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "employees"})
+        }
+      """
+    )
+  
+  }
+
   // @LINE:10
   class ReverseAsyncController(_prefix: => String) {
 
@@ -105,6 +145,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "loginSubmit"})
+        }
+      """
+    )
+  
+    // @LINE:15
+    def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.logout",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
         }
       """
     )

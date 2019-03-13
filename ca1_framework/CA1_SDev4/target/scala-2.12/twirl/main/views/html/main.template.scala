@@ -22,10 +22,10 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,Html,play.twirl.api.HtmlFormat.Appendable] {
+object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.Employee,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(pagename: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(pagename: String, employee: models.users.Employee)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
@@ -56,7 +56,13 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
 			<li """),_display_(/*25.9*/if(pagename == "Home")/*25.31*/{_display_(Seq[Any](format.raw/*25.32*/("""class ="active"""")))}),format.raw/*25.48*/("""><a href=""""),_display_(/*25.59*/routes/*25.65*/.HomeController.index()),format.raw/*25.88*/("""">Home</a><li>
 		    <li """),_display_(/*26.12*/if(pagename == "Project")/*26.37*/{_display_(Seq[Any](format.raw/*26.38*/("""class ="active"""")))}),format.raw/*26.54*/("""><a href=""""),_display_(/*26.65*/routes/*26.71*/.HomeController.index()),format.raw/*26.94*/("""">Project</a><li>
 			<li """),_display_(/*27.9*/if(pagename == "Contact")/*27.34*/{_display_(Seq[Any](format.raw/*27.35*/("""class ="active"""")))}),format.raw/*27.51*/("""><a href=""""),_display_(/*27.62*/routes/*27.68*/.HomeController.index()),format.raw/*27.91*/("""">Contact</a><li>
-			<li """),_display_(/*28.9*/if(pagename == "Login")/*28.32*/{_display_(Seq[Any](format.raw/*28.33*/("""class ="active"""")))}),format.raw/*28.49*/("""><a href=""""),_display_(/*28.60*/routes/*28.66*/.LoginController.login()),format.raw/*28.90*/("""">Login</a><li>
+			<li """),_display_(/*28.9*/if(pagename == "Login")/*28.32*/{_display_(Seq[Any](format.raw/*28.33*/("""class ="active"""")))}),format.raw/*28.49*/(""">
+				"""),_display_(/*29.6*/if(employee != null)/*29.26*/ {_display_(Seq[Any](format.raw/*29.28*/("""
+					"""),format.raw/*30.6*/("""<a href=""""),_display_(/*30.16*/routes/*30.22*/.LoginController.logout()),format.raw/*30.47*/("""">Logout</a>
+				""")))}/*31.7*/else/*31.12*/{_display_(Seq[Any](format.raw/*31.13*/("""
+					"""),format.raw/*32.6*/("""<a href=""""),_display_(/*32.16*/routes/*32.22*/.LoginController.login()),format.raw/*32.46*/("""">Login</a>
+				""")))}),format.raw/*33.6*/("""
+			"""),format.raw/*34.4*/("""<li>
 		</ul>
 	    </div>
 	</nav>
@@ -72,8 +78,8 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
 		</div>
 		<div class="col-sm-6">
 		    <div class="midcol">
-                """),_display_(/*44.18*/content),format.raw/*44.25*/("""
-		    """),format.raw/*45.7*/("""</div>
+                """),_display_(/*50.18*/content),format.raw/*50.25*/("""
+		    """),format.raw/*51.7*/("""</div>
 		</div>
 		<div class="col-sm-3">
 		    <div class="well sidecol">
@@ -84,9 +90,9 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
     <script>
         var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 
-        var x = setInterval(function() """),format.raw/*56.40*/("""{"""),format.raw/*56.41*/("""
+        var x = setInterval(function() """),format.raw/*62.40*/("""{"""),format.raw/*62.41*/("""
 
-        """),format.raw/*58.9*/("""var now = new Date().getTime();
+        """),format.raw/*64.9*/("""var now = new Date().getTime();
     
         var distance = countDownDate - now;
     
@@ -98,11 +104,11 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
         document.getElementById("demo").innerHTML = days + "d " + hours + "h "
          + minutes + "m " + seconds + "s ";
     
-        if (distance < 0) """),format.raw/*70.27*/("""{"""),format.raw/*70.28*/("""
-         """),format.raw/*71.10*/("""clearInterval(x);
+        if (distance < 0) """),format.raw/*76.27*/("""{"""),format.raw/*76.28*/("""
+         """),format.raw/*77.10*/("""clearInterval(x);
          document.getElementById("demo").innerHTML = "EXPIRED";
-             """),format.raw/*73.14*/("""}"""),format.raw/*73.15*/("""
-                """),format.raw/*74.17*/("""}"""),format.raw/*74.18*/(""", 1000);
+             """),format.raw/*79.14*/("""}"""),format.raw/*79.15*/("""
+                """),format.raw/*80.17*/("""}"""),format.raw/*80.18*/(""", 1000);
                 </script>
 		    </div>
 		</div>
@@ -124,9 +130,9 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
     }
   }
 
-  def render(pagename:String,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(pagename)(content)
+  def render(pagename:String,employee:models.users.Employee,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(pagename,employee)(content)
 
-  def f:((String) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (pagename) => (content) => apply(pagename)(content)
+  def f:((String,models.users.Employee) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (pagename,employee) => (content) => apply(pagename,employee)(content)
 
   def ref: this.type = this
 
@@ -135,11 +141,11 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 13 10:53:26 GMT 2019
+                  DATE: Wed Mar 13 21:41:36 GMT 2019
                   SOURCE: /home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/main.scala.html
-                  HASH: 41335bb808295dbc07652ec0f2be65e0fdb97d5b
-                  MATRIX: 952->1|1079->35|1361->290|1389->291|1417->292|1502->350|1530->351|1563->357|1600->366|1629->367|1658->368|1734->416|1763->417|1796->423|1836->435|1865->436|1894->437|1941->456|1970->457|2003->463|2042->474|2071->475|2100->476|2184->532|2213->533|2246->539|2285->550|2314->551|2343->552|2409->590|2438->591|2471->597|2508->606|2537->607|2566->608|2606->620|2635->621|2664->623|2961->894|2992->916|3031->917|3078->933|3116->944|3131->950|3175->973|3228->999|3262->1024|3301->1025|3348->1041|3386->1052|3401->1058|3445->1081|3497->1107|3531->1132|3570->1133|3617->1149|3655->1160|3670->1166|3714->1189|3766->1215|3798->1238|3837->1239|3884->1255|3922->1266|3937->1272|3982->1296|4426->1713|4454->1720|4488->1727|4821->2032|4850->2033|4887->2043|5458->2586|5487->2587|5525->2597|5648->2692|5677->2693|5722->2710|5751->2711
-                  LINES: 28->1|33->2|40->9|40->9|40->9|40->9|40->9|41->10|41->10|41->10|41->10|41->10|41->10|42->11|42->11|42->11|42->11|42->11|42->11|43->12|43->12|43->12|43->12|43->12|43->12|44->13|44->13|44->13|44->13|44->13|44->13|45->14|45->14|45->14|45->14|45->14|45->14|46->15|56->25|56->25|56->25|56->25|56->25|56->25|56->25|57->26|57->26|57->26|57->26|57->26|57->26|57->26|58->27|58->27|58->27|58->27|58->27|58->27|58->27|59->28|59->28|59->28|59->28|59->28|59->28|59->28|75->44|75->44|76->45|87->56|87->56|89->58|101->70|101->70|102->71|104->73|104->73|105->74|105->74
+                  HASH: c56bbbe400be29abcda597a5feda7630226c19dd
+                  MATRIX: 974->1|1134->68|1416->323|1444->324|1472->325|1557->383|1585->384|1618->390|1655->399|1684->400|1713->401|1789->449|1818->450|1851->456|1891->468|1920->469|1949->470|1996->489|2025->490|2058->496|2097->507|2126->508|2155->509|2239->565|2268->566|2301->572|2340->583|2369->584|2398->585|2464->623|2493->624|2526->630|2563->639|2592->640|2621->641|2661->653|2690->654|2719->656|3016->927|3047->949|3086->950|3133->966|3171->977|3186->983|3230->1006|3283->1032|3317->1057|3356->1058|3403->1074|3441->1085|3456->1091|3500->1114|3552->1140|3586->1165|3625->1166|3672->1182|3710->1193|3725->1199|3769->1222|3821->1248|3853->1271|3892->1272|3939->1288|3972->1295|4001->1315|4041->1317|4074->1323|4111->1333|4126->1339|4172->1364|4208->1383|4221->1388|4260->1389|4293->1395|4330->1405|4345->1411|4390->1435|4437->1452|4468->1456|4901->1862|4929->1869|4963->1876|5296->2181|5325->2182|5362->2192|5933->2735|5962->2736|6000->2746|6123->2841|6152->2842|6197->2859|6226->2860
+                  LINES: 28->1|33->2|40->9|40->9|40->9|40->9|40->9|41->10|41->10|41->10|41->10|41->10|41->10|42->11|42->11|42->11|42->11|42->11|42->11|43->12|43->12|43->12|43->12|43->12|43->12|44->13|44->13|44->13|44->13|44->13|44->13|45->14|45->14|45->14|45->14|45->14|45->14|46->15|56->25|56->25|56->25|56->25|56->25|56->25|56->25|57->26|57->26|57->26|57->26|57->26|57->26|57->26|58->27|58->27|58->27|58->27|58->27|58->27|58->27|59->28|59->28|59->28|59->28|60->29|60->29|60->29|61->30|61->30|61->30|61->30|62->31|62->31|62->31|63->32|63->32|63->32|63->32|64->33|65->34|81->50|81->50|82->51|93->62|93->62|95->64|107->76|107->76|108->77|110->79|110->79|111->80|111->80
                   -- GENERATED --
               */
           

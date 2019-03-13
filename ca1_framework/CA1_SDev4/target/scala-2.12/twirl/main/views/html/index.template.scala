@@ -22,25 +22,25 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.Employee,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(employee: models.users.Employee):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.15*/("""
-	"""),format.raw/*2.2*/("""<h1>Welcome to the Jupiter Mining Corporation<br>Website</b></h1>
-""")))}),format.raw/*3.2*/("""
+Seq[Any](_display_(/*2.2*/main("Home",employee)/*2.23*/{_display_(Seq[Any](format.raw/*2.24*/("""
+	"""),format.raw/*3.2*/("""<h1>Welcome to the Jupiter Mining Corporation<br>Website</b></h1>
+""")))}),format.raw/*4.2*/("""
 """))
       }
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(employee:models.users.Employee): play.twirl.api.HtmlFormat.Appendable = apply(employee)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((models.users.Employee) => play.twirl.api.HtmlFormat.Appendable) = (employee) => apply(employee)
 
   def ref: this.type = this
 
@@ -49,11 +49,11 @@ Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 13 10:53:25 GMT 2019
+                  DATE: Wed Mar 13 21:41:36 GMT 2019
                   SOURCE: /home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/index.scala.html
-                  HASH: 49cf0b50f7c401c23b9dd1f9db76921b7de7647f
-                  MATRIX: 1030->1|1050->13|1088->14|1116->16|1212->83
-                  LINES: 33->1|33->1|33->1|34->2|35->3
+                  HASH: 976581202eb9eb20dc394aea2607aa4a8b56a48e
+                  MATRIX: 963->1|1090->36|1119->57|1157->58|1185->60|1281->127
+                  LINES: 28->1|33->2|33->2|33->2|34->3|35->4
                   -- GENERATED --
               */
           

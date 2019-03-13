@@ -26,5 +26,8 @@ libraryDependencies ++= Seq(evolutions,jdbc)
 libraryDependencies += "org.assertj" % "assertj-core" % "3.11.1" % Test
 libraryDependencies += "org.awaitility" % "awaitility" % "3.1.3" % Test
 
+//image upload
+libraryDependencies += "org.imgscalr" % "imgscalr-lib" % "4.2"
+
 // Make verbose tests
 testOptions in Test := Seq(Tests.Argument(TestFrameworks.JUnit, "-a", "-v"))
