@@ -7,6 +7,8 @@ import io.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
 
+import models.Department;
+
 @Entity
 @Table(name = "employee")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -29,6 +31,8 @@ public class Employee extends Model {
     @Constraints.Required
     private String password;
 
+    @ManyToOne
+    private Department department;
     public Employee()
     {
 

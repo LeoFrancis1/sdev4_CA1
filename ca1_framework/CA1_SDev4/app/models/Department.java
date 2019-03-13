@@ -18,7 +18,7 @@ public class Department extends Model {
     private String deptName;
 
     //a Department can have many Employees
-    @OneToMany
+    @OneToMany(mappedBy = "department",cascade = CascadeType.PERSIST)
     private List<Employee> empList;
 
 
