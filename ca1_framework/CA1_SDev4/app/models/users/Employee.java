@@ -107,4 +107,16 @@ public class Employee extends Model {
         return find.query().where().eq("email",email).eq("password",password).findUnique();
     }
 
+    public static Employee getEmployeeById(String id)
+    {
+        if (id == null)
+        {
+            return null;
+        }
+        else
+        {
+            return find.query().where().eq("email", id).findUnique();
+        }
+    }
+
 }

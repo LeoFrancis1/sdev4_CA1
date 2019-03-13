@@ -43,7 +43,14 @@ public class LoginController extends Controller {
             //stores the logged in email in a cookie
             session("email", loginForm.get().getEmail());
 
-            return redirect(controllers.routes.HomeController.index());
+            return redirect(controllers.routes.HomeController.index(Employee.getEmployeeById(session().get("email")))));
         }
+    }
+
+    public Result logout()
+    {
+        session().clear();
+        flash("success", "YOu have been logged out");
+        return redirect(routes.LoginController.login(Employee.getEmployeeById(session().get("email")))));
     }
 }

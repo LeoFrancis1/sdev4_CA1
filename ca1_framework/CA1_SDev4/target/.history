@@ -110,3 +110,14 @@ compile
 clean 
 compile
 run
+exit
+clean compile
+clean / compile
+clean/compile
+clean
+compile
+h2-browser
+clean
+compile
+run
+exit
