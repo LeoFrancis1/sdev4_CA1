@@ -33,8 +33,14 @@ public class Employee extends Model {
     @Constraints.Required
     private String password;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="AID")
+    private Address address;
+
     @ManyToOne
     private Department department;
+
+    
     public Employee()
     {
 
@@ -129,5 +135,15 @@ public class Employee extends Model {
             return find.query().where().eq("email", id).findUnique();
         }
     }
+
+
+    public Department getDepartment() {
+        return this.department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
 
 }

@@ -1,6 +1,37 @@
-@(employees: List[models.users.Employee],employee: models.users.Employee)
+@(employees: List[models.users.Employee], departments: List[models.Department], employee: models.users.Employee)
 @main("Employee",employee){
 	<h1>Current Employees</h1>
-
+	<div class="col-sm-3">
+		<h4>Departments</h4>
+		<ul class="list-group">
+			@for(d <- departments){
+				<li class=list-group-item catheight">@d.getDeptName
+					<span class="badge">'d.getEmpList.size</span>
+				</li>
+			}
+		</ul>
+	</div>
+	<div class="col-sm-9">
+		<table class="table table-bordered table-hover table-condensed">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Department</th>
+					<th>Job Title</th>
+					<th>Phone No.</th>
+				</tr>
+			</thead>
+			<tbody>
+				@for(e<-employees){
+				<tr>
+					<td>@e.getName</td>
+					<td>@e.getDepartment</td>
+					<td>@e.getJobTitle</td>
+					<td>@e.getWorkPhone</td>
+				</tr>
+				}
+			</tbody>
+		</table>
+	</div>
 	
 }

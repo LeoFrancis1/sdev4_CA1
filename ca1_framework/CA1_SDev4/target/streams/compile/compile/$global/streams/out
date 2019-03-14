@@ -1,64 +1,64 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:29:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:36:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Employee][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("email"), '_label -> "Email", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:30:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:37:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Employee][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("name"), '_label -> "Name", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:31:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:38:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Address][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(aForm)("address1"), '_label -> "Address 1", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:32:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:39:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Address][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(aForm)("address2"), '_label -> "Address 2", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:33:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:40:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Address][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(aForm)("town/city"), '_label -> "Town / City", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:34:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:41:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Address][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(aForm)("eircode"), '_label -> "Eircode", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:35:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:42:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Employee][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("jobTitle"), '_label -> "Job Title", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:36:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:43:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Employee][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("workPhone"), '_label -> "Work Phone", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:37:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:44:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Employee][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("salary"), '_label -> "Salary", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:38:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:45:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Employee][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("password"), '_label -> "Password", 'class -> "form-control")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:40:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:50:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Employee][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("role").copy(value=Some("employee")), '_label -> "", 'hidden -> "hidden")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:40:46: not found: value value[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:50:46: not found: value value[0m
 [0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("role").copy(value=Some("employee")), '_label -> "", 'hidden -> "hidden")[0m
 [0m[[0m[31merror[0m] [0m[0m                                             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:41:24: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/addNewEmployee.scala.html:51:24: type mismatch;[0m
 [0m[[0m[31merror[0m] [0m[0m found   : play.data.Form[models.users.Employee][0m
 [0m[[0m[31merror[0m] [0m[0m required: play.api.data.Field[0m
-[0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)(""), '_label -> "", 'hidden -> "hidden")[0m
+[0m[[0m[31merror[0m] [0m[0m            @inputText(empForm)("email"), '_label -> "", 'hidden -> "hidden")[0m
 [0m[[0m[31merror[0m] [0m[0m                       ^[0m
 [0m[[0m[31merror[0m] [0m[0m13 errors found[0m

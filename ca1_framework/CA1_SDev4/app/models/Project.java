@@ -25,6 +25,8 @@ public class Project extends Model {
     @Constraints.Required
     private double allocatedBudget;
 
+    @OneToMany(mappedBy = "department", cascade = CascadeType.PERSIST)
+    private List<Employee> projectEmployees;
 
     public Project(Long id, String projectName, Date startDate, Date finishDate, double allocatedBudget) {
         this.id = id;
@@ -34,7 +36,54 @@ public class Project extends Model {
         this.allocatedBudget = allocatedBudget;
     }
 
+    public void setProjectName(String projectName)
+    {
+        this.projectName = projectName;
+    }
 
+    public String getProjectName()
+    {
+        return this.projectName;
+    }
+
+    public void setStartDate(Date startDate)
+    {
+        this.startDate = startDate;
+    }
+
+    public Date getStartDate()
+    {
+        return this.startDate;
+    }
+
+    public void setFinishDate(Date finishDate)
+    {
+        this.finishDate = finishDate;
+    }
+
+    public Date getFinishDate()
+    {
+        return this.finishDate;
+    }
+
+    public void setAllocatedBudget(double allocatedBudget)
+    {
+        this.allocatedBudget = allocatedBudget;
+    }
+
+    public double getAllocatedBudget()
+    {
+        return this.allocatedBudget;
+    }
+
+    public void setProjectEmployees(List<Employee> projectEmployees)
+    {
+        this.projectEmployees = projectEmployees;
+    }
+    public List<Employee> getProjectEmployees()
+    {
+        return this.projectEmployees;
+    }
 
 //Make Methods to calculate these
 // private double costperDay;

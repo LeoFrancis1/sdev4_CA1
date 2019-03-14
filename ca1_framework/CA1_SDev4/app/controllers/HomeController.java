@@ -20,4 +20,9 @@ public class HomeController extends Controller {
         return ok(index.render(Employee.getEmployeeById(session().get("email"))));
     }
 
+    public Result employees()
+    {
+        
+    }
+
 }

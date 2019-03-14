@@ -65,16 +65,16 @@ public class Department extends Model {
     //     return Department.find.query().where().orderBy("name asc").findList();
     // }
 
-    // public static Map<String,String> options()
-    // {
-    //     LinkedHashMap<String,String> options = new LinkedHashMap();
+    public static Map<String,String> options()
+    {
+        LinkedHashMap<String,String> options = new LinkedHashMap();
 
-    //     for (Department d: Department.findAll())
-    //     {
-    //         options.put(d.getId().toString(), d.getDeptName());
-    //     }
-    //     return options;
-    // }
+        for (Department d: Department.findAll())
+        {
+            options.put(d.getId().toString(), d.getDeptName());
+        }
+        return options;
+    }
 
 
 }
