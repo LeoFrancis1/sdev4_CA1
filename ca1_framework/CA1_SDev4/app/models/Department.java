@@ -57,13 +57,13 @@ public class Department extends Model {
         this.empList = empList;
     }
 
-    // public static Finder<Long,Department> find = new Finder<Long,Department>(Department.class);
+    public static Finder<Long,Department> find = new Finder<Long,Department>(Department.class);
 
-    // //finder for all the departments
-    // public static List<Department> findAll()
-    // {
-    //     return Department.find.query().where().orderBy("name asc").findList();
-    // }
+    //finder for all the departments
+    public static List<Department> findAll()
+    {
+        return Department.find.query().where().orderBy("name asc").findList();
+    }
 
     public static Map<String,String> options()
     {

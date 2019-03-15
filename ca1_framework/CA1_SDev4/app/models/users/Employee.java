@@ -20,6 +20,8 @@ public class Employee extends Model {
     @Constraints.Required
     @Id
     private String email;
+
+    private Long id;
     @Column(insertable=false, updatable=false)
     private String role;
     @Constraints.Required
@@ -64,6 +66,15 @@ public class Employee extends Model {
         this.email = email;
     }
 
+    public Long getId()
+    {
+        return this.id;
+    }
+
+    public void setId(Long id)
+    {
+        this.id  = id;
+    }
     public String getRole() {
         return this.role;
     }

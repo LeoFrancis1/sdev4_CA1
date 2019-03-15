@@ -17,8 +17,8 @@ public class Manager extends Employee {
         
     }
 
-    public Manager(String email, String role, String jobTitle, String workPhone, double salary, String password) {
-        super(email,role,jobTitle,workPhone,salary,password);
+    public Manager(String email, String role, String name, String jobTitle, String workPhone, double salary, String password) {
+        super(email,role,name,jobTitle,workPhone,salary,password);
     }
 
 }

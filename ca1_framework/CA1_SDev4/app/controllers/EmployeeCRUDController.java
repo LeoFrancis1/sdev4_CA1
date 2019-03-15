@@ -11,6 +11,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import models.users.*;
+import models.Department;
 
 import views.html.*;
 
@@ -50,7 +51,7 @@ public class EmployeeCRUDController extends Controller {
         Form<Address> newAddressForm = formFactory.form(Address.class).bindFromRequest();
         if (newEmployeeForm.hasErrors())
         {
-            return badRequest(addNewcleanEmployee.render(newEmployeeForm, newAddressForm, Employee.getEmployeeById(session().get("email"))));
+            return badRequest(addNewEmployee.render(newEmployeeForm, newAddressForm, Employee.getEmployeeById(session().get("email"))));
         }
         else
         {
@@ -71,9 +72,9 @@ public class EmployeeCRUDController extends Controller {
 
             FilePart<File> image = data.getFile("upload");
 
-            String saveImageMessage = saveFile(newItem.getId(), image);
+            String saveImageMessage = saveFile(newEmployee.getId(), image);
             flash("success", "Employee " + newEmployee.getName() + " was added/updated.");
-            return redirect(controllers.route.EmployeeCRUDController.usersEmployee());
+            return redirect(controllers.routes.EmployeeCRUDController.usersEmployee());
         }
     }
     public Result usersEmployee() {
@@ -83,7 +84,7 @@ public class EmployeeCRUDController extends Controller {
         empList = Employee.findAll();
         deptList = Department.findAll();
 
-        return ok(employees.render(empList,Employee.getEmployeeById(session().get("email"))));
+        return ok(employees.render(empList,deptList,Employee.getEmployeeById(session().get("email"))));
     }
 
     public String saveFile(Long id, FilePart<File> uploaded)
