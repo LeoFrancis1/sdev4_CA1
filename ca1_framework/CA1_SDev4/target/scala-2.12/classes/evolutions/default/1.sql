@@ -23,11 +23,15 @@ create table department (
 create table employee (
   role                          varchar(255),
   email                         varchar(255) not null,
+  id                            bigint,
+  name                          varchar(255),
   job_title                     varchar(255),
   work_phone                    varchar(255),
   salary                        double not null,
   password                      varchar(255),
+  aid                           bigint,
   department_id                 bigint,
+  constraint uq_employee_aid unique (aid),
   constraint pk_employee primary key (email)
 );
 
@@ -42,6 +46,8 @@ create table project (
 
 alter table address add constraint fk_address_employee_email foreign key (employee_email) references employee (email) on delete restrict on update restrict;
 
+alter table employee add constraint fk_employee_aid foreign key (aid) references address (id) on delete restrict on update restrict;
+
 alter table employee add constraint fk_employee_department_id foreign key (department_id) references department (id) on delete restrict on update restrict;
 create index ix_employee_department_id on employee (department_id);
 
@@ -49,6 +55,8 @@ create index ix_employee_department_id on employee (department_id);
 # --- !Downs
 
 alter table address drop constraint if exists fk_address_employee_email;
+
+alter table employee drop constraint if exists fk_employee_aid;
 
 alter table employee drop constraint if exists fk_employee_department_id;
 drop index if exists ix_employee_department_id;

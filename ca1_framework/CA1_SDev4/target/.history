@@ -234,3 +234,27 @@ clean
 compile
 git status
 exit
+clean
+compile
+clean
+compile
+clean
+compile
+h2-browser
+clean
+compile
+run
+exit
+clean
+compile
+clean
+compile
+run
+h2-browser
+run
+h2-bowser
+h2-browser
+clean
+compile
+run
+exit
