@@ -50,7 +50,7 @@ public class EmployeeCRUDController extends Controller {
         Form<Address> newAddressForm = formFactory.form(Address.class).bindFromRequest();
         if (newEmployeeForm.hasErrors())
         {
-            return badRequest(addNewEmployee,render(newEmployeeForm, newAddressForm, Employee.getEmployeeById(session().get("email"))));
+            return badRequest(addNewcleanEmployee.render(newEmployeeForm, newAddressForm, Employee.getEmployeeById(session().get("email"))));
         }
         else
         {
@@ -118,7 +118,7 @@ public class EmployeeCRUDController extends Controller {
                        BufferedImage img = ImageIO.read(newFile);
                        BufferedImage scaledImg = Scalr.resize(img,90);
 
-                       if (ImageIO.write(scaledImg,, extension, new File("public/images/employeeProfiles/", id + "thumb.jpg")))
+                       if (ImageIO.write(scaledImg, extension, new File("public/images/employeeProfiles/", id + "thumb.jpg")))
                        {
                             return "/ file uploaded and thumbnail created.";
                        }

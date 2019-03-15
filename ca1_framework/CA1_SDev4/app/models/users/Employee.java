@@ -112,6 +112,15 @@ public class Employee extends Model {
         this.password = password;
     }
 
+    public Address getAddress()
+    {
+        return this.address;
+    }
+
+    public void setAddress(Address a)
+    {
+        this.address = a;
+    }
     public static Finder<Long,Employee> find = new Finder<>(Employee.class);
 
     //finder for all the departments
