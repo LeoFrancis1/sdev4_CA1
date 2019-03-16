@@ -1,27 +1,22 @@
-@(itemForm: Form[models.project])
+@(pForm: Form[models.Project],employee: models.users.Employee)
 
 @import helper._
 
-@main("Add Project"){
+@main("Add Project",employee){
     <p class="lead">Add new Project</p>
     @form(action=routes.ProjectController.addItemSubmit(), 'class -> "form-horizontal", 'role -> "form") {
-        @* CRSF attack prevention *@
+        @* CSRF attack prevention *@
         @* This token, sent by the controller, will be used to authenticate the form submission *@
-        @CRSF.formField
+        @CSRF.formField
 
-        <!-- @inputText(itemForm("name"), '_label -> "Name", 'class -> "form-control")
-        @select(
-            itemForm("category.id")
-        ) -->
-
-        @inputText(itemForm("Project Title"), '_label -> "Project Title", class -> "form-control")
-        @inputText(itemForm("Start Date"), '_label -> "Start Date", class -> "form-control")
-        @inputText(itemForm("End Date"), '_label -> "End Date", class -> "form-control")
-        @inputText(itemForm("Allocated Budget"), '_label -> "Allocated Budget", class -> "form-control")
+        @inputText(pForm("Project Title"), '_label -> "Project Title", 'class -> "form-control")
+        @inputText(pForm("Start Date"), '_label -> "Start Date", 'class -> "form-control")
+        @inputText(pForm("End Date"), '_label -> "End Date", 'class -> "form-control")
+        @inputText(pForm("Allocated Budget"), '_label -> "Allocated Budget", 'class -> "form-control")
 
         <div class="actions">
 
-            <input type="submit" value="Add item" class="btn btn-primary">
+            <input type="submit" value="Add Project" class="btn btn-primary">
             <a href="@routes.ProjectController.Project(0)">
                 <button type="button" class="btn btn-warning">Cancel</button>
                 </a>

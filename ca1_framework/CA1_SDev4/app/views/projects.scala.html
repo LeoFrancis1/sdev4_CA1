@@ -1,6 +1,6 @@
-@(items: List[models.projects.Project],
-user: models.users.User,env: play.api.Environment)
-@main("projects,Employees){
+@(projects: List[models.Project],
+employee: models.users.Employee,env: play.api.Environment)
+@main("projects",employee){
     
     
     @* Display successful new project message from flash, if it is set *@
@@ -29,18 +29,18 @@ user: models.users.User,env: play.api.Environment)
         <tbody>
        
             @* Loop for creating table rows from ItemOnSale data *@
-            @for(i<-items) {
+            @for(p<-projects) {
                <tr>
                    
 
-                  <td>@i.getId</td>
-                  <td>@i.getprojectName</td>
-                  <td>@i.getStartDate</td>
-                  <td>@i.getFinishDate</td>
-                  <td>@i.getAllocatedBudget</td>
+                  <td>@p.getId</td>
+                  <td>@p.getProjectName</td>
+                  <td>@p.getStartDate</td>
+                  <td>@p.getFinishDate</td>
+                  <td>@p.getAllocatedBudget</td>
                   
 
-                  @if((user != null) && ("admin".equals(user.getRole()))) {
+                  @if((employee != null) && ("manager".equals(employee.getRole()))) {
 						<td>
 							<a href="@routes.HomeController.updateItem(i.getId)" class="button-xs btn-danger">
 								<span class="glyphicon glyphicon-pencil"></span>
@@ -58,7 +58,7 @@ user: models.users.User,env: play.api.Environment)
         
         </tbody>
     </table>
-    @if((user != null) && ("admin".equals(user.getRole()))) {
+    @if((employee != null) && ("manager".equals(employee.getRole()))) {
     <p>
         <a href="@routes.HomeController.addItem()">
             <button class="btn btn-primary">Add a project/button>
