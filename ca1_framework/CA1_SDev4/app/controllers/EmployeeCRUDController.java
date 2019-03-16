@@ -27,6 +27,7 @@ import org.imgscalr.*;
 
 public class EmployeeCRUDController extends Controller {
     private FormFactory formFactory;
+
     private Environment e;
     @Inject
     public EmployeeCRUDController(FormFactory f,Environment env)
@@ -142,5 +143,43 @@ public class EmployeeCRUDController extends Controller {
         return "/ no image file.";
     }
 
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
+    @Transactional
+    public Result removeEmployee(Long id) 
+    {
+        Employee.find.ref(id).delete();
+
+        flash("success", "Employee record has been removed");
+
+        return redirect(controllers.routes.EmployeeCRUDController.usersEmployee());
+    }
+
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
+    @Transactional
+    public Result updateEmployee(long id)
+    {
+        Employee e;
+        //not sure if an Address object is needed
+        Address a;
+        Form<Employee> empForm;
+        Form<Address> aForm;
+
+        try 
+        {
+           e = Employee.find.byId(id); 
+           a = Address.find.byId(e.getAddress().getId());
+
+           empForm = formFactory.form(Employee.class).fill(e);
+           aForm = formFactory.form(Address.class).fill(a);
+        } 
+        catch (Exception ex) 
+        {
+            return badRequest("error");
+        }
+        return ok(addNewEmployee.render(empForm,aForm,Employee.getEmployeeById(session().get("email"))));
+    }
+    
 
 }

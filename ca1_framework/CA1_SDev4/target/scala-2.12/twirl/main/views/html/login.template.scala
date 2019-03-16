@@ -42,25 +42,30 @@ Seq[Any](format.raw/*4.1*/("""
             """)))}),format.raw/*12.14*/("""
         """),format.raw/*13.9*/("""</p>
     """)))}),format.raw/*14.6*/("""
-    """),format.raw/*15.5*/("""<!--the login form-->
-    """),_display_(/*16.6*/helper/*16.12*/.form(action = controllers.routes.LoginController.loginSubmit())/*16.76*/ {_display_(Seq[Any](format.raw/*16.78*/("""
-        """),format.raw/*17.37*/("""
-        """),format.raw/*19.85*/("""
-        """),_display_(/*20.10*/CSRF/*20.14*/.formField),format.raw/*20.24*/("""
+    """),_display_(/*15.6*/if(flash.containsKey("error"))/*15.36*/ {_display_(Seq[Any](format.raw/*15.38*/("""
+        """),format.raw/*16.9*/("""<div class="alert alert-success">
+            """),_display_(/*17.14*/flash/*17.19*/.get("error")),format.raw/*17.32*/("""
+        """),format.raw/*18.9*/("""</div>
+    """)))}),format.raw/*19.6*/("""
+    """),format.raw/*20.5*/("""<!--the login form-->
+    """),_display_(/*21.6*/helper/*21.12*/.form(action = controllers.routes.LoginController.loginSubmit())/*21.76*/ {_display_(Seq[Any](format.raw/*21.78*/("""
+        """),format.raw/*22.37*/("""
+        """),format.raw/*24.85*/("""
+        """),_display_(/*25.10*/CSRF/*25.14*/.formField),format.raw/*25.24*/("""
 
-        """),format.raw/*22.9*/("""<div class="form-group">
-            """),_display_(/*23.14*/inputText(loginForm("email"), '_label -> "",
-            'class -> "form-control input-xs", 'placeholder -> "Email")),format.raw/*24.72*/("""
-        """),format.raw/*25.9*/("""</div>
+        """),format.raw/*27.9*/("""<div class="form-group">
+            """),_display_(/*28.14*/inputText(loginForm("email"), '_label -> "",
+            'class -> "form-control input-xs", 'placeholder -> "Email")),format.raw/*29.72*/("""
+        """),format.raw/*30.9*/("""</div>
         <div class="form-group">
-            """),_display_(/*27.14*/inputText(loginForm("password"), '_label -> "",
-            'class -> "form-control input-xs", 'placeholder -> "Password")),format.raw/*28.75*/("""
-        """),format.raw/*29.9*/("""</div>
+            """),_display_(/*32.14*/inputText(loginForm("password"), '_label -> "",
+            'class -> "form-control input-xs", 'placeholder -> "Password")),format.raw/*33.75*/("""
+        """),format.raw/*34.9*/("""</div>
 
         <div class="form-group">
             <input type="submit" value="Sign In" class="btn btn-primary">
         </div>
-    """)))}),format.raw/*34.23*/("""
+    """)))}),format.raw/*39.23*/("""
 """)))}))
       }
     }
@@ -77,11 +82,11 @@ Seq[Any](format.raw/*4.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 15 23:20:52 GMT 2019
+                  DATE: Sat Mar 16 14:12:11 GMT 2019
                   SOURCE: /home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/app/views/login.scala.html
-                  HASH: 9faecf4748ddde54c176b6cce238b8bd2b0dd21a
-                  MATRIX: 988->2|1130->73|1174->89|1201->91|1231->113|1270->115|1301->120|1390->184|1427->213|1466->215|1501->224|1573->269|1621->301|1661->303|1706->321|1716->322|1745->330|1795->349|1831->358|1871->368|1903->373|1956->400|1971->406|2044->470|2084->472|2121->509|2158->670|2195->680|2208->684|2239->694|2276->704|2341->742|2478->858|2514->867|2594->920|2737->1042|2773->1051|2939->1203
-                  LINES: 28->2|31->3|34->4|35->5|35->5|35->5|36->6|38->8|38->8|38->8|39->9|40->10|40->10|40->10|41->11|41->11|41->11|42->12|43->13|44->14|45->15|46->16|46->16|46->16|46->16|47->17|48->19|49->20|49->20|49->20|51->22|52->23|53->24|54->25|56->27|57->28|58->29|63->34
+                  HASH: 11f8ba1c145063ea128eddee7f2bbe134b3762cc
+                  MATRIX: 988->2|1130->73|1174->89|1201->91|1231->113|1270->115|1301->120|1390->184|1427->213|1466->215|1501->224|1573->269|1621->301|1661->303|1706->321|1716->322|1745->330|1795->349|1831->358|1871->368|1903->374|1942->404|1982->406|2018->415|2092->462|2106->467|2140->480|2176->489|2218->501|2250->506|2303->533|2318->539|2391->603|2431->605|2468->642|2505->803|2542->813|2555->817|2586->827|2623->837|2688->875|2825->991|2861->1000|2941->1053|3084->1175|3120->1184|3286->1336
+                  LINES: 28->2|31->3|34->4|35->5|35->5|35->5|36->6|38->8|38->8|38->8|39->9|40->10|40->10|40->10|41->11|41->11|41->11|42->12|43->13|44->14|45->15|45->15|45->15|46->16|47->17|47->17|47->17|48->18|49->19|50->20|51->21|51->21|51->21|51->21|52->22|53->24|54->25|54->25|54->25|56->27|57->28|58->29|59->30|61->32|62->33|63->34|68->39
                   -- GENERATED --
               */
           

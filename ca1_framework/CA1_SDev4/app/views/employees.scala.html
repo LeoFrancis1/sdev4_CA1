@@ -6,7 +6,7 @@
 		<ul class="list-group">
 			@for(d <- departments){
 				<li class=list-group-item catheight">@d.getDeptName
-					<span class="badge">'d.getEmpList.size</span>
+					<span class="badge">d.getEmpList.size</span>
 				</li>
 			}
 		</ul>
@@ -25,9 +25,20 @@
 				@for(e<-employees){
 				<tr>
 					<td>@e.getName</td>
+					<!--tweek e.getDepartment method to get the correct department displaying -->
 					<td>@e.getDepartment</td>
 					<td>@e.getJobTitle</td>
 					<td>@e.getWorkPhone</td>
+					<td>
+						<a href="@routes.EmployeeCRUDController.updateEmployee(e.getId)" class ="button-xs btn-danger"onclick="return confirmDel();">
+							<span class="glyphicon glyphicon-pencil"></span>
+						</a>
+					</td>
+					<td>
+						<a href="@routes.EmployeeCRUDController.removeEmployee(e.getId)" class ="button-xs btn-danger"onclick="return confirmDel();">
+							<span class="glyphicon glyphicon-minus"></span>
+						</a>
+					</td>
 				</tr>
 				}
 			</tbody>

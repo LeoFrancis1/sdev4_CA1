@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/conf/routes
-// @DATE:Fri Mar 15 23:20:52 GMT 2019
+// @DATE:Sat Mar 16 14:12:11 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:23
+  // @LINE:24
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:23
+    // @LINE:24
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -79,12 +79,22 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
-    def addEmployee: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.EmployeeCRUDController.addEmployee",
+    // @LINE:18
+    def usersEmployee: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeCRUDController.usersEmployee",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addNewEmployee"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "employees"})
+        }
+      """
+    )
+  
+    // @LINE:22
+    def updateEmployee: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeCRUDController.updateEmployee",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "updateEmployee/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
@@ -99,12 +109,22 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:18
-    def usersEmployee: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.EmployeeCRUDController.usersEmployee",
+    // @LINE:21
+    def removeEmployee: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeCRUDController.removeEmployee",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "removeEmployee/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:19
+    def addEmployee: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeCRUDController.addEmployee",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "employees"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addNewEmployee"})
         }
       """
     )

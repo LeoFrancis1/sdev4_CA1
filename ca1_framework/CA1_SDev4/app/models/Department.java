@@ -62,7 +62,7 @@ public class Department extends Model {
     //finder for all the departments
     public static List<Department> findAll()
     {
-        return Department.find.query().where().orderBy("name asc").findList();
+        return Department.find.query().where().orderBy("dept_name asc").findList();
     }
 
 

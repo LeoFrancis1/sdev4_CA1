@@ -88,5 +88,13 @@ public class Address extends Model {
         this.employee = employee;
     }
 
+    public static Finder<Long,Address> find = new Finder<>(Address.class);
+
+    //finder for all the departments
+    public static List<Address> findAll()
+    {
+        return Address.find.all();
+        //return Employee.find.query().where().orderBy("name asc").findList();
+    }
 
 }

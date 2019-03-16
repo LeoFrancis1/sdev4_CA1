@@ -24,7 +24,7 @@
 		<ul class="nav navbar-nav">
 			<li @if(pagename == "Home"){class ="active"}><a href="@routes.HomeController.index()">Home</a><li>
 		    <li @if(pagename == "Project"){class ="active"}><a href="@routes.HomeController.index()">Project</a><li>
-			<li @if(pagename == "Contact"){class ="active"}><a href="@routes.HomeController.index()">Contact</a><li>
+			<li @if(pagename == "Employees"){class ="active"}><a href="@routes.EmployeeCRUDController.usersEmployee()">Employees</a><li>
 			<li @if(pagename == "Login"){class ="active"}>
 				@if(employee != null) {
 					<a href="@routes.LoginController.logout()">Logout</a>
@@ -90,6 +90,7 @@
 		</div>
 	    </div>
 	</div>
+	<script src="@routes.Assets.versioned("javascripts/main.js")"></script>
     </body>
 </html>
 

@@ -12,6 +12,11 @@
             }
         </p>
     }
+    @if(flash.containsKey("error")) {
+        <div class="alert alert-success">
+            @flash.get("error")
+        </div>
+    }
     <!--the login form-->
     @helper.form(action = controllers.routes.LoginController.loginSubmit()) {
         @* CSRF attack prevention *@

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/sdev4ca1v2/sdev4_CA1/ca1_framework/CA1_SDev4/conf/routes
-// @DATE:Fri Mar 15 23:20:52 GMT 2019
+// @DATE:Sat Mar 16 14:12:11 GMT 2019
 
 package router
 
@@ -24,7 +24,7 @@ class Routes(
   LoginController_5: controllers.LoginController,
   // @LINE:18
   EmployeeCRUDController_2: controllers.EmployeeCRUDController,
-  // @LINE:23
+  // @LINE:24
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -41,7 +41,7 @@ class Routes(
     LoginController_5: controllers.LoginController,
     // @LINE:18
     EmployeeCRUDController_2: controllers.EmployeeCRUDController,
-    // @LINE:23
+    // @LINE:24
     Assets_4: controllers.Assets
   ) = this(errorHandler, HomeController_1, CountController_0, AsyncController_3, LoginController_5, EmployeeCRUDController_2, Assets_4, "/")
 
@@ -64,6 +64,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """employees""", """controllers.EmployeeCRUDController.usersEmployee"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addNewEmployee""", """controllers.EmployeeCRUDController.addEmployee"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addEmployeeSubmit""", """controllers.EmployeeCRUDController.addEmployeeSubmit"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """removeEmployee/""" + "$" + """id<[^/]+>""", """controllers.EmployeeCRUDController.removeEmployee(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateEmployee/""" + "$" + """id<[^/]+>""", """controllers.EmployeeCRUDController.updateEmployee(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -234,11 +236,47 @@ class Routes(
     )
   )
 
-  // @LINE:23
-  private[this] lazy val controllers_Assets_versioned9_route = Route("GET",
+  // @LINE:21
+  private[this] lazy val controllers_EmployeeCRUDController_removeEmployee9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("removeEmployee/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_EmployeeCRUDController_removeEmployee9_invoker = createInvoker(
+    EmployeeCRUDController_2.removeEmployee(fakeValue[Long]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.EmployeeCRUDController",
+      "removeEmployee",
+      Seq(classOf[Long]),
+      "GET",
+      this.prefix + """removeEmployee/""" + "$" + """id<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_EmployeeCRUDController_updateEmployee10_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("updateEmployee/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_EmployeeCRUDController_updateEmployee10_invoker = createInvoker(
+    EmployeeCRUDController_2.updateEmployee(fakeValue[Long]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.EmployeeCRUDController",
+      "updateEmployee",
+      Seq(classOf[Long]),
+      "GET",
+      this.prefix + """updateEmployee/""" + "$" + """id<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:24
+  private[this] lazy val controllers_Assets_versioned11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned9_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned11_invoker = createInvoker(
     Assets_4.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -309,10 +347,22 @@ class Routes(
         controllers_EmployeeCRUDController_addEmployeeSubmit8_invoker.call(EmployeeCRUDController_2.addEmployeeSubmit)
       }
   
-    // @LINE:23
-    case controllers_Assets_versioned9_route(params@_) =>
+    // @LINE:21
+    case controllers_EmployeeCRUDController_removeEmployee9_route(params@_) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_EmployeeCRUDController_removeEmployee9_invoker.call(EmployeeCRUDController_2.removeEmployee(id))
+      }
+  
+    // @LINE:22
+    case controllers_EmployeeCRUDController_updateEmployee10_route(params@_) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_EmployeeCRUDController_updateEmployee10_invoker.call(EmployeeCRUDController_2.updateEmployee(id))
+      }
+  
+    // @LINE:24
+    case controllers_Assets_versioned11_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned9_invoker.call(Assets_4.versioned(path, file))
+        controllers_Assets_versioned11_invoker.call(Assets_4.versioned(path, file))
       }
   }
 }
