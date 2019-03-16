@@ -1,0 +1,70 @@
+@(items: List[models.projects.Project],
+user: models.users.User,env: play.api.Environment)
+@main("projects,user){
+    
+    
+    @* Display successful new project message from flash, if it is set *@
+	@if(flash.containsKey("success")) {
+		<div class="alert alert-success">
+			@flash.get("success")
+		</div>
+}
+
+   
+
+    <div class="col-sm-9">
+        <table class="table table-bordered table-hover table-condensed">
+            <thead>
+        <tr>
+            
+            <th>ID</th>
+            <th>Project Name</th>
+            <th>Start Date</th>
+            <th>Finish Date</th>
+            <th>Allocated Budget</th>
+            
+            
+        </tr>
+        </thead>
+        <tbody>
+       
+            @* Loop for creating table rows from ItemOnSale data *@
+            @for(i<-items) {
+               <tr>
+                   
+
+                  <td>@i.getId</td>
+                  <td>@i.getprojectName</td>
+                  <td>@i.getStartDate</td>
+                  <td>@i.getFinishDate</td>
+                  <td>@i.getAllocatedBudget</td>
+                  
+
+                  @if((user != null) && ("admin".equals(user.getRole()))) {
+						<td>
+							<a href="@routes.HomeController.updateItem(i.getId)" class="button-xs btn-danger">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</a>
+                        </td>
+						<td>
+							<a href="@routes.HomeController.deleteItem(i.getId)" class="button-xs btn-danger" onclick="return confirmDel();">
+								<span class="glyphicon glyphicon-trash"></span>
+							</a>
+                        </td>
+                  }
+                  
+               </tr>
+            }
+        
+        </tbody>
+    </table>
+    @if((user != null) && ("admin".equals(user.getRole()))) {
+    <p>
+        <a href="@routes.HomeController.addItem()">
+            <button class="btn btn-primary">Add a project/button>
+        </a>
+    </p>
+    }
+</div>
+</span>
+ }
