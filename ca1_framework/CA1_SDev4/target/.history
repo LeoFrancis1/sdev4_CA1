@@ -302,3 +302,7 @@ run
 exit
 clean
 compile
+clean
+compile
+clean
+compile
