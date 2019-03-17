@@ -37,6 +37,8 @@ public class EmployeeCRUDController extends Controller {
     }
 
     @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
+    @Transactional
     public Result addEmployee()
     {
         Form<Employee> empForm = formFactory.form(Employee.class);
@@ -45,6 +47,7 @@ public class EmployeeCRUDController extends Controller {
     }
 
     @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
     @Transactional
     public Result addEmployeeSubmit()
     {

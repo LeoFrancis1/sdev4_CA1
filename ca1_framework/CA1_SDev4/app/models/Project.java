@@ -94,6 +94,18 @@ public class Project extends Model {
         return this.projectEmployees;
     }
 
+    public static Finder<Long,Project> find = new Finder<>(Project.class);
+
+    //finder for all the departments
+    public static List<Project> findAll()
+    {
+        return Project.find.all();
+        //return Employee.find.query().where().orderBy("name asc").findList();
+    }
+    public static Project authenticate(String email, String password) 
+    {
+        return find.query().where().eq("email",email).eq("password",password).findUnique();
+    }
 //Make Methods to calculate these
 // private double costperDay;
 // private double projectedCost;

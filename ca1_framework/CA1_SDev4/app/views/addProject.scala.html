@@ -4,7 +4,7 @@
 
 @main("Add Project",employee){
     <p class="lead">Add new Project</p>
-    @form(action=routes.ProjectController.addItemSubmit(), 'class -> "form-horizontal", 'role -> "form") {
+    @form(action=routes.ProjectController.addProjectSubmit(), 'class -> "form-horizontal", 'role -> "form") {
         @* CSRF attack prevention *@
         @* This token, sent by the controller, will be used to authenticate the form submission *@
         @CSRF.formField
@@ -17,7 +17,7 @@
         <div class="actions">
 
             <input type="submit" value="Add Project" class="btn btn-primary">
-            <a href="@routes.ProjectController.Project(0)">
+            <a href="@routes.ProjectController.projects()">
                 <button type="button" class="btn btn-warning">Cancel</button>
                 </a>
              </div>
