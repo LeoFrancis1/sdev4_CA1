@@ -393,3 +393,9 @@ clean
 compile
 run
 exit
+clean
+compile
+clean
+compile
+run
+exit
