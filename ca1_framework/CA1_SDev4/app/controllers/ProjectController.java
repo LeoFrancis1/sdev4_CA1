@@ -39,4 +39,17 @@ public class ProjectController extends Controller {
         return ok(additem.render(itemForm));
     }
 
+    public Result usersEmployee() {
+        // List<Employee> empList = null;
+        // List<Department> deptList = null;
+
+        // empList = id.findAll();
+        // deptList = projectName.findAll();
+        // deptList = startDate.findAll();
+        // deptList = finishDate.findAll();
+        // deptList = allocatedBudget.findAll();
+
+        return ok(projects.render(id,projectName,startDate,finishDate,allocatedBudget);
+    }
+
 }
