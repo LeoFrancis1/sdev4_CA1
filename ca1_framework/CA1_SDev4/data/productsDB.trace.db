@@ -568,3 +568,10 @@ SET aid = values('1')
 where email = 'JohnSmith@jmc.com'
 
 SELECT * FROM EMPLOYEE [42000-197]
+2019-03-18 20:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE employee
+SET aid = ('4)
+where email = 'ChloeArnett@jmc.com[*]';"; SQL statement:
+UPDATE employee
+SET aid = ('4)
+where email = 'ChloeArnett@jmc.com'; [42000-197]

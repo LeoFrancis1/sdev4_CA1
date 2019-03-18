@@ -29,7 +29,7 @@ insert into employee (email, id, role, name, job_Title, work_Phone, salary, pass
 insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
             values ('ChloeArnett@jmc.com',2,'employee','Chloe Arnett','Clerk','0857454464',27000.00, 'password',5);  
 insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
-            values ('NormanLovett@jmc.com',3,'employee','Bill Morris','Clerk','08599547934',35000.00, 'password',5);  
+            values ('NormanLovett@jmc.com',3,'employee','Norman Lovett','Clerk','08599547934',35000.00, 'password',5);  
 insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
             values ('HattieHayridge@jmc.com',4,'manager','Hattie Hayridge','manager','0854574398',40000.00, 'password',4); 
 

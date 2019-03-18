@@ -21,7 +21,7 @@
     <!--the login form-->
     
         @form(action=routes.EmployeeCRUDController.addEmployeeSubmit, 'class -> "form-horizontal",
-         'role -> "form", 'method -> "POST", 'enctype -> "multipart/form-data") {
+        'role -> "form", 'method -> "POST", 'enctype -> "multipart/form-data") {
             @* CSRF attack prevention *@
             @* This token, sent by the controller, will be used to authenticate
                 the form submission as a means of avoiding cross-site request forgery *@
@@ -50,7 +50,7 @@
             <div class="actions">
                 <input type="submit" value="Add/Update Employee" class="btn btn-primary">
                 <a href="@routes.EmployeeCRUDController.usersEmployee()">
-                    <button type="button" class="btn btn-warning"></button>
+                    <button type="button" class="btn btn-warning">Cancel</button>
                 </a>
             </div>
     }@* End of form *@

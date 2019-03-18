@@ -27,12 +27,16 @@
 				@if((employee != null) && ("manager".equals(employee.getRole()))) {
 					<a href="@routes.ProjectController.addProject()">Project CRUD</a>
 				} else if ((employee != null) && ("employee".equals(employee.getRole()))) {
-					<a href="@routes.ProjectController.projects()">Projects</a><li>
+					<a href="@routes.ProjectController.projects()">Projects</a>
 				} else {
 					<a href="@routes.LoginController.login()">Projects</a>
 				}
 		    </li>
-				
+			<li @if(pagename == "Project"){class ="active"}>
+				@if((employee != null) && ("manager".equals(employee.getRole()))) {
+					<a href="@routes.ProjectController.projects()">Projects</a>
+				}
+			</li>	
 			<li @if(pagename == "Employees"){class ="active"}>
 				@if((employee != null) && ("manager".equals(employee.getRole()))) {
 					<a href="@routes.EmployeeCRUDController.addEmployee()">Employee CRUD</a>
@@ -40,6 +44,11 @@
 					<a href="@routes.EmployeeCRUDController.usersEmployee()">Employees</a>
 				} else {
 					<a href="@routes.LoginController.login()">Employees</a>
+				}
+			</li>
+			<li @if(pagename == "Employees"){class ="active"}>
+				@if((employee != null) && ("manager".equals(employee.getRole()))) {
+					<a href="@routes.EmployeeCRUDController.usersEmployee()">Employees</a>
 				}
 			</li>	
 			<li @if(pagename == "Login"){class ="active"}>

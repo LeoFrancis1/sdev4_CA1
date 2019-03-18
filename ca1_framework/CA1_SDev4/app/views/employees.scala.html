@@ -1,4 +1,4 @@
-@(employees: List[models.users.Employee], departments: List[models.Department], employee: models.users.Employee)
+@(employees: List[models.users.Employee], departments: List[models.Department], employee: models.users.Employee, env: play.api.Environment)
 @main("Employee",employee){
 	<h1>Current Employees</h1>
 	<div class="col-sm-3">
@@ -15,6 +15,7 @@
 		<table class="table table-bordered table-hover table-condensed">
 			<thead>
 				<tr>
+					<th>Image</th>
 					<th>Name</th>
 					<th>Department</th>
 					<th>Job Title</th>
@@ -24,8 +25,13 @@
 			<tbody>
 				@for(e<-employees){
 				<tr>
+					@if(env.resource("public/images/employeeProfiles/"+e.getId +"thumb.jpg").isDefined){
+						<td><img src="public/images/employeeProfiles/a(e.getId + "thumb.jpg")"/></td>
+					} else {
+						<td><img src="public/images/employeeProfiles/noImage.jpg"/></td>
+					}
 					<td>@e.getName</td>
-					<!--tweek e.getDepartment method to get the correct department displaying -->
+					
 					<td>@e.getDepartment.getDeptName</td>
 					<td>@e.getJobTitle</td>
 					<td>@e.getWorkPhone</td>

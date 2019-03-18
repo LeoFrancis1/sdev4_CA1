@@ -1,10 +1,11 @@
-@(pForm: Form[models.Project],employee: models.users.Employee)
+@(pForm: Form[models.Project],employee: models.users.Employee, env: play.api.Environment)
 
 @import helper._
 
 @main("Add Project",employee){
     <p class="lead">Add new Project</p>
-    @form(action=routes.ProjectController.addProjectSubmit(), 'class -> "form-horizontal", 'role -> "form") {
+    @form(action=routes.ProjectController.addProjectSubmit(), 'class -> "form-horizontal",
+    'role -> "form", 'method -> "POST", 'enctype -> "multipart/form-data") {
         @* CSRF attack prevention *@
         @* This token, sent by the controller, will be used to authenticate the form submission *@
         @CSRF.formField
@@ -14,13 +15,15 @@
         @inputText(pForm("End Date"), '_label -> "End Date", 'class -> "form-control")
         @inputText(pForm("Allocated Budget"), '_label -> "Allocated Budget", 'class -> "form-control")
 
-        <div class="actions">
+        <label>Image Upload</label>
+        <input class="btn-sm btn-default" type="file" name="upload">
 
+        <div class="actions">
             <input type="submit" value="Add Project" class="btn btn-primary">
             <a href="@routes.ProjectController.projects()">
                 <button type="button" class="btn btn-warning">Cancel</button>
-                </a>
-             </div>
+            </a>
+        </div>
 
             
 

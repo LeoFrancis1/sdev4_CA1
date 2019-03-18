@@ -44,7 +44,7 @@ public class ProjectController extends Controller {
     {
         Form<Project> pForm = formFactory.form(Project.class);
 
-        return ok(addProject.render(pForm,Employee.getEmployeeById(session().get("email"))));
+        return ok(addProject.render(pForm,Employee.getEmployeeById(session().get("email")),e));
     }
 
     public Result projects()
@@ -63,7 +63,7 @@ public class ProjectController extends Controller {
         Form<Project> newPform = formFactory.form(Project.class).bindFromRequest();
         if(newPform.hasErrors())
         {
-            return badRequest(addProject.render(newPform, Employee.getEmployeeById(session().get("email"))));
+            return badRequest(addProject.render(newPform, Employee.getEmployeeById(session().get("email")),e));
         }
         else
         {
@@ -104,7 +104,7 @@ public class ProjectController extends Controller {
             return badRequest("error");
         }
 
-        return ok(addProject.render(pForm,Employee.getEmployeeById(session().get("email"))));
+        return ok(addProject.render(pForm,Employee.getEmployeeById(session().get("email")),e));
     }
 
     @Security.Authenticated(Secured.class)

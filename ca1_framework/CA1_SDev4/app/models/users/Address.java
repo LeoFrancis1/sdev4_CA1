@@ -17,7 +17,7 @@ public class Address extends Model {
     private String Address1;
     @Constraints.Required
     private String Address2;
-    @Constraints.Required
+    
     private String townCity;
     @Constraints.Required
     private String eircode;

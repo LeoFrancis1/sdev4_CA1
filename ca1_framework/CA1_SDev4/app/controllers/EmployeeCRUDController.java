@@ -46,8 +46,8 @@ public class EmployeeCRUDController extends Controller {
         return ok(addNewEmployee.render(empForm,aForm,Employee.getEmployeeById(session().get("email"))));
     }
 
-    @Security.Authenticated(Secured.class)
-    @With(AuthAdmin.class)
+    // @Security.Authenticated(Secured.class)
+    // @With(AuthAdmin.class)
     @Transactional
     public Result addEmployeeSubmit()
     {
@@ -88,7 +88,7 @@ public class EmployeeCRUDController extends Controller {
         empList = Employee.findAll();
         deptList = Department.findAll();
 
-        return ok(employees.render(empList,deptList,Employee.getEmployeeById(session().get("email"))));
+        return ok(employees.render(empList,deptList,Employee.getEmployeeById(session().get("email")),e));
     }
 
     public String saveFile(Long id, FilePart<File> uploaded)
