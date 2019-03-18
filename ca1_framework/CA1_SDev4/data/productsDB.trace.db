@@ -217,3 +217,202 @@ insert into employee (email, id, role, name, job_Title, work_Phone, salary, pass
 org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
 insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,aid,department_id)
             values ('HenriettaFord@jmc.com',4,'manager','HenriettaFord','manager','08512345678',40000.00, 'password',12,1) [42102-197]
+2019-03-17 23:23:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+select t0.role, t0.email, t0.id, t0.role, t0.name, t0.job_title, t0.work_phone, t0.salary, t0.password, t0.AID, t0.department_id from employee t0 [42102-197]
+2019-03-17 23:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+select t0.role, t0.email, t0.id, t0.role, t0.name, t0.job_title, t0.work_phone, t0.salary, t0.password, t0.AID, t0.department_id from employee t0 [42102-197]
+2019-03-17 23:51:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Finance') [42102-197]
+2019-03-17 23:51:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Catering') [42102-197]
+2019-03-17 23:51:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Mining') [42102-197]
+2019-03-17 23:51:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Repairs') [42102-197]
+2019-03-17 23:51:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Logistics') [42102-197]
+2019-03-17 23:51:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Security') [42102-197]
+2019-03-18 09:25:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEE (EMAIL, ID, ROLE, NAME, JOB_TITLE, WORK_PHONE, SALARY, PASSWORD,,[*]DEPARTMENT_ID)
+            VALUES ('ChrisBarrie@jmc.com',1,'employee','Chris Barrie','Technician','08556654566',14000.00, 'password',4) "; expected "identifier"; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,,department_id)
+            values ('ChrisBarrie@jmc.com',1,'employee','Chris Barrie','Technician','08556654566',14000.00, 'password',4) [42001-197]
+2019-03-18 09:25:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEE(AID)
+            VALUES('1')
+            WHERE[*] EMAIL = 'JohnSmith@jmc.com' "; SQL statement:
+insert into employee(aid)
+            values('1')
+            where email = 'JohnSmith@jmc.com' [42000-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Finance') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Catering') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Mining') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Repairs') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Logistics') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEPARTMENT" not found; SQL statement:
+insert into department (dept_name) values ('Security') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('JohnSmith@jmc.com',1,'employee','John Smith','Secretary','08512345678',25000.00, 'password',1) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('SeanWilliams@jmc.com',2,'employee','Sean Williams','Accountant','0855662616',27000.00, 'password',1) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('BillMorris@jmc.com',3,'employee','Bill Morris','Auditor','085573755474',35000.00, 'password',1) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('HenriettaFord@jmc.com',4,'manager','HenriettaFord','manager','0855843975',40000.00, 'password',1) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,,department_id)
+            values ('ChrisBarrie@jmc.com',1,'employee','Chris Barrie','Technician','08556654566',14000.00, 'password',4) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('CraigCharles@jmc.com',2,'employee','Craig Charles','Technician','0857456556',14500.00, 'password',4) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('Robert Llewyn@jmc.com',3,'employee','Robert Llewyn','Cleaner','08598824447',19000.00, 'password',2) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('DannyJohn-Jules@jmc.com',4,'manager','Danny John-Jules','manager','0854646564',42000.00, 'password',3) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('ClareGrogan@jmc.com',1,'employee','Clare Grogan','Secretary','0856545567',25000.00, 'password',5) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('ChloeArnett@jmc.com',2,'employee','Chloe Arnett','Clerk','0857454464',27000.00, 'password',5) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('NormanLovett@jmc.com',3,'employee','Bill Morris','Clerk','08599547934',35000.00, 'password',5) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,department_id)
+            values ('HattieHayridge@jmc.com',4,'manager','Hattie Hayridge','manager','0854574398',40000.00, 'password',4) [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('123 The Crescent','Beechbrook Gardens','Newbridge', 'S12 D354','JohnSmith@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('7565 The View','Babel Gardens','Navan', 'R32 D311','SeanWilliams@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('4 larch Rise','The Demesne','Kilcullen', 'S14 X180','BillMorris@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('The Manor','Kilbride','Port Laoise', 'DC2 S40','HenriettaFord@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('935 Ballysax','The Curragh','Newbridge', 'R32 RB26','ChrisBarrie@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('11 The Precint','Gardener Square','Donaghmede', 'S33 P321','CraigCharles@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('4 Oak Rise','Demesne View','Rostrevor', 'S11 F120','Robert Llewyn@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('Holyfield','Bloomfield','Tullamore', 'A90 2JZ','DannyJohn-Jules@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('123 The Crescent','Beechbrook Gardens','Newbridge', 'S12 D354','ClareGrogan@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('7565 The View','Babel Gardens','Navan', 'R32 D311','ChloeArnett@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('4 larch Rise','The Demesne','Kilcullen', 'S14 X180','NormanLovett@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADDRESS" not found; SQL statement:
+insert into address (address1, address2, town_city, eircode, employee_email)  
+            values  ('The Manor','Kilbride','Port Laoise', 'DC2 S40','HattieHayridge@jmc.com') [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+insert into employee(aid)
+            values('1')
+            where email = 'JohnSmith@jmc.com' [42102-197]
+2019-03-18 09:27:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROJECT" not found; SQL statement:
+insert into project (project_name, start_date, finish_date, allocated_budget)
+            values  ('Testing', TO_DATE('17/12/2015', 'DD/MM/YYYY'), TO_DATE('23/03/2019', 'DD/MM/YYYY'), 1000000.00) [42102-197]
+2019-03-18 09:28:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEE (EMAIL, ID, ROLE, NAME, JOB_TITLE, WORK_PHONE, SALARY, PASSWORD,,[*]DEPARTMENT_ID)
+            VALUES ('ChrisBarrie@jmc.com',1,'employee','Chris Barrie','Technician','08556654566',14000.00, 'password',4) "; expected "identifier"; SQL statement:
+insert into employee (email, id, role, name, job_Title, work_Phone, salary, password,,department_id)
+            values ('ChrisBarrie@jmc.com',1,'employee','Chris Barrie','Technician','08556654566',14000.00, 'password',4) [42001-197]
+2019-03-18 09:28:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEE(AID)
+            VALUES('1')
+            WHERE[*] EMAIL = 'JohnSmith@jmc.com' "; SQL statement:
+insert into employee(aid)
+            values('1')
+            where email = 'JohnSmith@jmc.com' [42000-197]
+2019-03-18 09:29:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEE(AID)
+            VALUES('1')
+            WHERE[*] EMAIL = 'JohnSmith@jmc.com' "; SQL statement:
+insert into employee(aid)
+            values('1')
+            where email = 'JohnSmith@jmc.com' [42000-197]
+2019-03-18 09:33:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEE(AID)
+            VALUE[*]('1')
+            WHERE EMAIL = 'JohnSmith@jmc.com' "; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, FROM"; SQL statement:
+insert into employee(aid)
+            value('1')
+            where email = 'JohnSmith@jmc.com' [42001-197]
+2019-03-18 09:33:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEE(AID)
+            VALUES('1')
+            WHERE[*] EMAIL = 'JohnSmith@jmc.com' "; SQL statement:
+insert into employee(aid)
+            values('1')
+            where email = 'JohnSmith@jmc.com' [42000-197]
+2019-03-18 09:33:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEE(AID)
+            VALUES('1')
+            WHERE[*] EMAIL= 'JohnSmith@jmc.com' "; SQL statement:
+insert into employee(aid)
+            values('1')
+            where email= 'JohnSmith@jmc.com' [42000-197]

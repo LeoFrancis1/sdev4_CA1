@@ -57,6 +57,11 @@ public class Department extends Model {
         this.empList = empList;
     }
 
+    public int getEmpListSize()
+    {
+        return empList.size();
+    }
+
     public static Finder<Long,Department> find = new Finder<Long,Department>(Department.class);
 
     //finder for all the departments
@@ -66,7 +71,7 @@ public class Department extends Model {
     }
 
 
-
+    //Throw a -Werror which is thrown if there's a warning which this causes
     // public static Map<String,String> options() {
     //     LinkedHashMap<String,String> options = new LinkedHashMap();
      

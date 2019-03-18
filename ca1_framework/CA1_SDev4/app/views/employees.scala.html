@@ -4,9 +4,9 @@
 	<div class="col-sm-3">
 		<h4>Departments</h4>
 		<ul class="list-group">
-			@for(d <- departments){
-				<li class=list-group-item catheight">@d.getDeptName
-					<span class="badge">d.getEmpList.size</span>
+			@for(d <- departments) {
+				<li class="list-group-item catheight">@d.getDeptName
+					<span class="badge">@d.getEmpList.size</span>
 				</li>
 			}
 		</ul>
@@ -26,7 +26,7 @@
 				<tr>
 					<td>@e.getName</td>
 					<!--tweek e.getDepartment method to get the correct department displaying -->
-					<td>@e.getDepartment</td>
+					<td>@e.getDepartment.getDeptName</td>
 					<td>@e.getJobTitle</td>
 					<td>@e.getWorkPhone</td>
 					<td>

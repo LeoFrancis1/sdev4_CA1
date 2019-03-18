@@ -102,6 +102,7 @@ public class Project extends Model {
         return Project.find.all();
         //return Employee.find.query().where().orderBy("name asc").findList();
     }
+    
     public static Project authenticate(String email, String password) 
     {
         return find.query().where().eq("email",email).eq("password",password).findUnique();
