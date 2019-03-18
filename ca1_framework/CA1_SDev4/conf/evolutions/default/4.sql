@@ -61,9 +61,56 @@ insert into address (address1, address2, town_city, eircode, employee_email)
             values  ('The Manor','Kilbride','Port Laoise', 'DC2 S40','HattieHayridge@jmc.com');
 
 
-insert into employee(aid)
-            values('1')
-            where email = 'JohnSmith@jmc.com';
+UPDATE employee
+SET aid = ('1')
+where email = 'JohnSmith@jmc.com';
+
+UPDATE employee
+SET aid = ('2')
+where email = 'ChrisBarrie@jmc.com';
+
+UPDATE employee
+SET aid = ('3')
+where email = 'HattieHayridge@jmc.com';
+
+UPDATE employee
+SET aid = ('4')
+where email = '	NormanLovett@jmc.com';
+
+UPDATE employee
+SET aid = ('5')
+where email = 'ChloeArnett@jmc.com';
+
+UPDATE employee
+SET aid = ('6')
+where email = 'ClareGrogan@jmc.com';
+
+UPDATE employee
+SET aid = ('7')
+where email = 'DannyJohn-Jules@jmc.com';
+
+UPDATE employee
+SET aid = ('8')
+where email = 'Robert Llewyn@jmc.com';
+
+UPDATE employee
+SET aid = ('9')
+where email = 'CraigCharles@jmc.com';
+
+UPDATE employee
+SET aid = ('10')
+where email = 'HenriettaFord@jmc.com';
+
+
+UPDATE employee
+SET aid = ('11')
+where email = 'BillMorris@jmc.com';
+
+UPDATE employee
+SET aid = ('12')
+where email = 'SeanWilliams@jmc.com';
+
+
 
 insert into project (project_name, start_date, finish_date, allocated_budget)
             values  ('Testing', TO_DATE('17/12/2015', 'DD/MM/YYYY'), TO_DATE('23/03/2019', 'DD/MM/YYYY'), 1000000.00);
