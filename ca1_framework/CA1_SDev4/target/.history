@@ -418,3 +418,7 @@ clean
 compile
 run
 h2-browser
+exit
+clean
+compile
+exit
